@@ -1,0 +1,38 @@
+function getWindDerection(){
+  if (windDerect <= 25 && windDerect >= 335) {
+    this.windDerect = 'N'
+  } else {
+    if (windDerect >= 26 && windDerect <= 70) {
+      this.windDerect = 'NE'
+    } else {
+      if (windDerect >= 71 && windDerect <= 115) {
+        this.windDerect = 'E'
+      } else {
+        if (windDerect >= 116 && windDerect <= 150) {
+          this.windDerect = 'SE'
+        } else {
+          if (windDerect >= 151 && windDerect <= 195) {
+            this.windDerect = 'S'
+          } else {
+            if (windDerect >= 196 && windDerect <= 230) {
+              this.windDerect = 'SW'
+            } else {
+              if (windDerect >= 231 && windDerect <= 277) {
+                this.windDerect = 'W'
+
+              } else {
+                if (windDerect >= 278 && windDerect <= 325) {
+                  this.windDerect = 'NW'
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+const getWind = computed(() => {
+  return getWindDerection()
+})

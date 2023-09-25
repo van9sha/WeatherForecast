@@ -8,7 +8,7 @@ import useLocalStorage from "@/composables/useLocalStorage";
 
 export const useRootStore = defineStore('root', {
     state: () => ({
-        city_name: useLocalStorage('Ufa','MyCity'),
+        city_name: useLocalStorage('MyCity','MyCity'),
         weatherInfo: shallowRef([]),
         switchPage: shallowRef('City'),
         switchSecondPage: shallowRef(null),

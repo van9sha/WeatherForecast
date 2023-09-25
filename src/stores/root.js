@@ -1,9 +1,7 @@
 import {defineStore} from "pinia";
 import axios from "axios";
 import {API_KEY, BASE_URL} from "@/const";
-import {markRaw, ref, shallowRef} from "vue";
-import City from "@/components/sections/City.vue";
-import SunRice from "@/components/sections/SunRice.vue";
+import {shallowRef} from "vue";
 import useLocalStorage from "@/composables/useLocalStorage";
 
 export const useRootStore = defineStore('root', {

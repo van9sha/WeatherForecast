@@ -1,13 +1,6 @@
 <script setup>
 import Description from "@/components/sections/Description.vue";
-import {useRootStore} from "@/stores/root";
-import {storeToRefs} from "pinia";
-import {computed, ref} from "vue";
-
-const rootStore = useRootStore();
-
-
-
+import {ref} from "vue";
 
 const props = defineProps({
   weatherInfo:{

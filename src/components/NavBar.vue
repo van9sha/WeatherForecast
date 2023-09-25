@@ -1,14 +1,9 @@
 <script setup>
 
 import {Document, Location, Setting, Sunny,} from "@element-plus/icons-vue";
-import City from "@/components/sections/City.vue";
-import Temp from "@/components/sections/Temp.vue";
 import {useRootStore} from "@/stores/root";
 import {storeToRefs} from "pinia";
-import SunRice from "@/components/sections/SunRice.vue";
-import Wind from "@/components/sections/Wind.vue";
-import Description from "@/components/sections/Description.vue";
-import {watch} from "vue";
+
 
 
 const rootStore = useRootStore();

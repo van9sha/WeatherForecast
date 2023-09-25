@@ -4,10 +4,8 @@ import NavBar from "@/components/NavBar.vue";
 import Description from "./sections/Description.vue";
 import {useRootStore} from "@/stores/root";
 import {storeToRefs} from "pinia";
-import SunRice from "@/components/sections/SunRice.vue";
-import {BASE_MAP} from "@/const";
 import {YandexMap} from "vue-yandex-maps";
-import {computed, onMounted, ref, watch} from "vue";
+import {ref} from "vue";
 import Info from "@/components/Info.vue";
 import useLocalStorage from "@/composables/useLocalStorage";
 

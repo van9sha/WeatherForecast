@@ -1,11 +1,8 @@
 <script setup>
 
 import {Plus} from "@element-plus/icons-vue";
-import {computed, onBeforeMount, onMounted, ref} from "vue";
-import {useRootStore} from "@/stores/root";
-import {storeToRefs} from "pinia";
 
-const rootStore = useRootStore();
+
 
 const props = defineProps({
   weatherInfo:{

@@ -21,8 +21,6 @@ function getDate(){
 
 
 
-
-
 </script>
 
 <template>

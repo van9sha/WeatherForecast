@@ -5,7 +5,7 @@ export default function (initialValue, key) {
     const val = ref(initialValue);
 
 
-    onMounted(() => {
+
         const storageVal = window.localStorage.getItem(key);
 
         if (storageVal) {
@@ -15,7 +15,7 @@ export default function (initialValue, key) {
         watch(val,val => {
             window.localStorage.setItem(key,JSON.stringify(val));
         }, {deep:true});
-    });
+
 
 
 

@@ -42,7 +42,6 @@ function getDate(){
   height: 300px
   font-size: 20px
   background: rgba(#D1D0CE,0.5)
-  border-radius: 20px
 
 .description,.city,.data
   font-size: 30px

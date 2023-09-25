@@ -22,11 +22,10 @@ const props = defineProps({
 .temp
   display: flex
   flex-direction: column
-  justify-content: space-around
+  justify-content: space-between
   align-items: center
   height: 300px
   background: rgba(#D1D0CE,0.5)
-  border-radius: 20px
   font-size: 45px
   color: #2B3856
 

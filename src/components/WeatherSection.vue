@@ -43,8 +43,10 @@ const bal = ref(false)
 const items = ref([
   {id:'',city:'',temp:''},
   {id:'',city:'',temp:''},
-  {id:'',city:'',temp:''}
+  {id:'3',city:'3',temp:'3'}
 ])
+
+
 
 function getCoordinate(coordinates){
   this.coordinates = parseInt(rootStore.weatherInfo?.coord?.lat,rootStore.weatherInfo?.coord?.lon)
@@ -93,10 +95,9 @@ function getCoordinate(coordinates){
 .yandex-container
   height: 300px
   padding-right: 20px
-  border-radius: 20px
 
 .map
-  width: 280px
+  width: 30%
   height: 300px
 
 .sections
@@ -112,14 +113,13 @@ function getCoordinate(coordinates){
   width: 100%
   height: 300px
   background-color: rgba(209, 208, 206, 0.5)
-  border-radius: 25px
   display: flex
   justify-content: space-around
 
 
 .section-one
   display: flex
-  width: 80%
+  width: 100%
 
 .section-main
   height: 300px
@@ -135,5 +135,4 @@ function getCoordinate(coordinates){
 
 .section-center,.section-right
   width: 35%
-  padding-right: 50px
 </style>

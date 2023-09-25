@@ -26,7 +26,7 @@ const {switchSecondPage,switchPage } = storeToRefs(rootStore);
   <slot>
     <el-radio-group style="margin-bottom: 20px">
     </el-radio-group>
-    <el-menu style="--el-menu-active-color: #f8ff1c; border-radius:20px;"
+    <el-menu style="--el-menu-active-color: #f8ff1c;"
         default-active="2"
         class="el-menu-vertical-demo"
     >
@@ -62,16 +62,10 @@ const {switchSecondPage,switchPage } = storeToRefs(rootStore);
   display: flex
   flex-direction: column
   justify-content: space-evenly
-  height: 280px
+  height: 300px
 
 .el-menu-item
   transition: var(--el-transition-duration)
-
-.el-menu-item:hover
-  border-radius: 20px
-
-.el-menu-item:focus
-  border-radius: 20px
 
 .knock
   background: rgba(#D1D0CE,0.5)

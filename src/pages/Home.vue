@@ -14,7 +14,7 @@ rootStore.getCoordinates()
 const { weatherInfo,city_name,coordinates} = storeToRefs(rootStore);
 
 function getCoordinate(coordinates){
-  this.coordinates.value = [rootStore.weatherInfo?.coord?.lat,rootStore.weatherInfo?.coord?.lon]
+  coordinates.value = [rootStore.weatherInfo?.coord?.lat,rootStore.weatherInfo?.coord?.lon]
   return coordinates.value
 }
 const value1 = ref(true)
@@ -63,10 +63,10 @@ onMounted(rootStore.getCoordinates)
 .btn
   position: relative
   margin-bottom: 30px
-  transform: translateX(-100%)
+  transform: translateX(-110%)
   border: none
-  height: 50px
-  width: 50px
+  height: 65px
+  width: 65px
 
 .img
   background-size: cover

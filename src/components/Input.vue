@@ -26,8 +26,8 @@ const props = defineProps({
 
 <style scoped lang="sass">
 .input
-  width: 400px
-  height: 50px
+  width: 450px
+  height: 70px
   font-size: 30px
   margin-bottom: 30px
 </style>

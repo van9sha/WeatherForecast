@@ -22,19 +22,22 @@ const props = defineProps({
   }
 })
 
+const emit = defineEmits(['create'])
 
+const item = ref(props.items)
 
-function addItem(){
-    this.item.id = Date.now();
-    this.item.city = props.weatherInfo?.name;
-    this.item.temp = props.weatherInfo?.main?.temp;
-    this.$emit('create',this.item)
-    this.item = {
-      id: '',
-      city: '',
-      temp: '',
+function addItem(item){
+    item.id = Date.now();
+    item.city = props.weatherInfo?.name;
+    item.temp = props.weatherInfo?.main?.temp;
+    emit('create',item.value)
+    item.value = {
+      id:'',
+      city:'',
+      temp:'',
     }
   }
+
 
 </script>
 

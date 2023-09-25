@@ -27,7 +27,8 @@ const emit = defineEmits(['create'])
 const item = ref(props.items)
 
 function addItem(item){
-    item.id = Date.now();
+    item.img = props.weatherInfo?.weather[0]?.icon
+    item.id = Date.now()
     item.city = props.weatherInfo?.name;
     item.temp = props.weatherInfo?.main?.temp;
     emit('create',item.value)
@@ -35,8 +36,16 @@ function addItem(item){
       id:'',
       city:'',
       temp:'',
+      img:'',
     }
   }
+
+function  removeItem(item){
+  item.id = ''
+  item.city = ''
+  item.temp = ''
+  item.img = ''
+}
 
 
 </script>
@@ -46,10 +55,11 @@ function addItem(item){
   <div class="info-main">
     <Description
         v-for="item in items"
-        :key="Date.now()"
+        :key="item.id"
         :item="item"
         :weatherInfo="weatherInfo"
         :addItem="addItem"
+        :removeItem="removeItem"
         :bal="bal"
 
     />

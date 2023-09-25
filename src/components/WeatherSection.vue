@@ -41,9 +41,9 @@ const detailedControls = ref({ zoomControl: { position: { right: 10, top: 50 } }
 const bal = ref(false)
 
 const items = ref([
-  {id:'',city:'',temp:''},
-  {id:'',city:'',temp:''},
-  {id:'3',city:'3',temp:'3'}
+  {id:'',city:'',temp:'',img:''},
+  {id:'',city:'',temp:'',img:''},
+  {id:'',city:'',temp:'',img:''}
 ])
 
 
@@ -128,10 +128,11 @@ function getCoordinate(coordinates){
   align-items: center
 
 .section-first
-  width: 90%
+  width: 100%
   display: flex
   align-items: center
   justify-content: space-around
+  margin-right: 20%
 
 .section-center,.section-right
   width: 35%

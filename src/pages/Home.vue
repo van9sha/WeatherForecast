@@ -3,7 +3,7 @@ import Input from "@/components/Input.vue";
 import WeatherSection from "@/components/WeatherSection.vue";
 import {useRootStore} from "@/stores/root";
 import {storeToRefs} from "pinia";
-import {onMounted, ref} from "vue";
+import {onMounted, ref, watch} from "vue";
 import {Moon, Search, Sunny} from "@element-plus/icons-vue";
 
 

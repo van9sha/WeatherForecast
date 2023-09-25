@@ -4,10 +4,11 @@ import {API_KEY, BASE_URL} from "@/const";
 import {markRaw, ref, shallowRef} from "vue";
 import City from "@/components/sections/City.vue";
 import SunRice from "@/components/sections/SunRice.vue";
+import useLocalStorage from "@/composables/useLocalStorage";
 
 export const useRootStore = defineStore('root', {
     state: () => ({
-        city_name: 'Ufa',
+        city_name: useLocalStorage('Ufa','MyCity'),
         weatherInfo: shallowRef([]),
         switchPage: shallowRef('City'),
         switchSecondPage: shallowRef(null),

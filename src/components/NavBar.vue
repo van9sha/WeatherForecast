@@ -8,6 +8,7 @@ import {storeToRefs} from "pinia";
 import SunRice from "@/components/sections/SunRice.vue";
 import Wind from "@/components/sections/Wind.vue";
 import Description from "@/components/sections/Description.vue";
+import {watch} from "vue";
 
 
 const rootStore = useRootStore();
@@ -20,6 +21,7 @@ const {switchSecondPage,switchPage } = storeToRefs(rootStore);
     required:true
   }
 })*/
+
 </script>
 
 <template>

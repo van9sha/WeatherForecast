@@ -7,8 +7,9 @@ import {storeToRefs} from "pinia";
 import SunRice from "@/components/sections/SunRice.vue";
 import {BASE_MAP} from "@/const";
 import {YandexMap} from "vue-yandex-maps";
-import {computed, onMounted, ref} from "vue";
+import {computed, onMounted, ref, watch} from "vue";
 import Info from "@/components/Info.vue";
+import useLocalStorage from "@/composables/useLocalStorage";
 
 
 
@@ -40,11 +41,11 @@ const controls = ref(['fullscreenControl']);
 const detailedControls = ref({ zoomControl: { position: { right: 10, top: 50 } } });
 const bal = ref(false)
 
-const items = ref([
+const items = useLocalStorage([
   {id:'',city:'',temp:'',img:''},
   {id:'',city:'',temp:'',img:''},
   {id:'',city:'',temp:'',img:''}
-])
+],'isDescriptionItem')
 
 
 

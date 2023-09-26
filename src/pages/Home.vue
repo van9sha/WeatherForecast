@@ -11,22 +11,25 @@ const rootStore = useRootStore();
 rootStore.getWeather();
 rootStore.getCoordinates()
 
-const { weatherInfo,city_name,coordinates} = storeToRefs(rootStore);
+const { weatherInfo,city_name,coordinates,backgroundImage} = storeToRefs(rootStore);
 
 function getCoordinate(coordinates){
   coordinates.value = [rootStore.weatherInfo?.coord?.lat,rootStore.weatherInfo?.coord?.lon]
   return coordinates.value
 }
+
+
 const value1 = ref(true)
 
 onMounted(rootStore.getWeather)
 onMounted(rootStore.getCoordinates)
+onMounted(rootStore.getBackGround)
 
 
 </script>
 
 <template>
-  <div class="root" >
+  <div :style='`background-image:url(${backgroundImage})`' class="root" >
     <div class="wrapper" >
       <div class="main">
         <el-switch
@@ -40,8 +43,9 @@ onMounted(rootStore.getCoordinates)
                 :city_name="city_name"
                 :getWeather="rootStore.getWeather"
                 v-model="rootStore.city_name"
+                :getBackGround="rootStore.getBackGround"
             />
-            <el-button class="btn" :icon="Search" @click="rootStore.getWeather" circle />
+            <el-button class="btn" :icon="Search" @click="rootStore.getWeather() ; rootStore.getBackGround()" circle />
           </div>
         </div>
         <WeatherSection
@@ -59,6 +63,8 @@ onMounted(rootStore.getCoordinates)
 
 <style scoped lang="sass">
 @import "../assets/styles/main"
+
+
 
 .btn
   position: relative

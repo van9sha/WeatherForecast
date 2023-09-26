@@ -10,8 +10,14 @@ const props = defineProps({
     type:Function,
     required:true
   },
+  getBackGround:{
+    type:Function,
+    required:true
+  }
 
 })
+
+
 
 
 
@@ -19,7 +25,7 @@ const props = defineProps({
 
 <template>
   <el-input
-      @keyup.enter="props.getWeather"
+      @keyup.enter="props.getWeather() ; props.getBackGround()"
       class='input'
       type="text"
       placeholder=" "

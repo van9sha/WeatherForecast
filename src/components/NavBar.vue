@@ -9,6 +9,7 @@ import SunRice from "@/components/sections/SunRice.vue";
 import Wind from "@/components/sections/Wind.vue";
 import Description from "@/components/sections/Description.vue";
 import {watch} from "vue";
+import About from "@/components/sections/About.vue";
 
 
 const rootStore = useRootStore();
@@ -47,9 +48,9 @@ const {switchSecondPage,switchPage } = storeToRefs(rootStore);
         <template #title>Description</template>
       </el-menu-item>
 
-      <el-menu-item index="4">
+      <el-menu-item index="4" @click="switchPage=About">
         <el-icon><setting/></el-icon>
-        <template #title>Navigator Four</template>
+        <template #title>About</template>
       </el-menu-item>
     </el-menu>
   </slot>

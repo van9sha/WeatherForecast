@@ -8,6 +8,9 @@ import {YandexMap} from "vue-yandex-maps";
 import {ref} from "vue";
 import Info from "@/components/Info.vue";
 import useLocalStorage from "@/composables/useLocalStorage";
+import About from "@/components/sections/About.vue";
+import City from "@/components/sections/City.vue";
+import Temp from "@/components/sections/Temp.vue";
 
 
 
@@ -58,7 +61,7 @@ function getCoordinate(coordinates){
     <div class="section-main">
       <NavBar :switchPage="`${switchPage}`"/>
     </div>
-    <div v-if="switchPage !== Description" class="section-one" >
+    <div v-if="switchPage === (City) || switchPage === (Temp)" class="section-one" >
       <div class="section-center">
         <component :is=switchPage :weatherInfo="weatherInfo"></component>
 
@@ -79,8 +82,11 @@ function getCoordinate(coordinates){
 
     <div v-else class="section-one">
       <div class="info">
-        <div class="section-first">
+        <div v-if="switchPage === Description" class="section-first">
           <Info :weatherInfo="weatherInfo" :bal="bal" :items="items"></Info>
+        </div>
+        <div v-else class="section-first">
+          <About></About>
         </div>
       </div>
 

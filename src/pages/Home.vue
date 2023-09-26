@@ -18,9 +18,6 @@ function getCoordinate(coordinates){
   return coordinates.value
 }
 
-
-const value1 = ref(true)
-
 onMounted(rootStore.getWeather)
 onMounted(rootStore.getCoordinates)
 onMounted(rootStore.getBackGround)
@@ -32,11 +29,6 @@ onMounted(rootStore.getBackGround)
   <div :style='`background-image:url(${backgroundImage})`' class="root" >
     <div class="wrapper" >
       <div class="main">
-        <el-switch
-            v-model="value1"
-            :active-action-icon="Moon"
-            :inactive-action-icon="Sunny"
-        />
         <div class="header" >
           <div class="input_place">
             <Input

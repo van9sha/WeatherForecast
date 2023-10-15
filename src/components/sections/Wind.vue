@@ -11,9 +11,9 @@ const props = defineProps({
 <template>
   <div class="temp">
     <div>Wind</div>
+    <div class="tempNow">Speed: <strong>{{ weatherInfo?.wind?.speed }}</strong> m/sec</div>
     <div class="tempMax">Direction: {{ weatherInfo?.wind?.deg }}&deg;</div>
-    <div class="tempNow">Speed: {{ weatherInfo?.wind?.speed }}m/sec</div>
-    <div class="tempMin">Gust: {{ weatherInfo?.wind?.gust }}m/sec</div>
+
   </div>
 </template>
 
